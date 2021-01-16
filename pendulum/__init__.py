@@ -1,1 +1,1 @@
-__all__ = ["BodyPenduluml.py"]
+__all__ = ["BodyPendulum.py"]

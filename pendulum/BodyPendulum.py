@@ -1,9 +1,15 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+
 from Box2D.examples.framework import (Framework, Keys, main)
 from Box2D import (b2EdgeShape, b2FixtureDef, b2PolygonShape, b2CircleShape)
+from pyconsys.Control import Control
+from pyconsys.PIDControl import PIDControl
 
 
 class BodyPendulum(Framework):
-    name = "Pendulum (PyConSys)"
+    name = "Inverted Pendulum (PyConSys)"
     description = "(m) manual, (a) automatic, (d) delete, (c) create"
     speed = 3
 
@@ -14,6 +20,7 @@ class BodyPendulum(Framework):
 
     def createWorld(self):
         self._isLiving = True
+        self._auto = False
 
         self.ground = self.world.CreateBody(
             shapes=b2EdgeShape(vertices=[(-25, 0), (25, 0)])
@@ -94,15 +101,20 @@ class BodyPendulum(Framework):
 
     def Keyboard(self, key):
         if key == Keys.K_a:
-            self.pendelumLJoin.motorSpeed = 10
-            self.pendelumLJoin.maxMotorTorque = 1000
-            self.pendelumRJoin.motorSpeed = 10
-            self.pendelumRJoin.maxMotorTorque = 1000
+            if self._isLiving:
+                self.pendelumLJoin.motorSpeed = 10
+                self.pendelumLJoin.maxMotorTorque = 1000
+                self.pendelumRJoin.motorSpeed = 10
+                self.pendelumRJoin.maxMotorTorque = 1000
+                self._auto = True
+
         elif key == Keys.K_m:
-            self.pendelumLJoin.motorSpeed = 0
-            self.pendelumLJoin.maxMotorTorque = 1
-            self.pendelumRJoin.motorSpeed = 0
-            self.pendelumRJoin.maxMotorTorque = 1000
+            self._auto = False
+            if self._isLiving:
+                self.pendelumLJoin.motorSpeed = 0
+                self.pendelumLJoin.maxMotorTorque = 1
+                self.pendelumRJoin.motorSpeed = 0
+                self.pendelumRJoin.maxMotorTorque = 1000
         elif key == Keys.K_d:
             if self._isLiving:
                 self.destroyWorld()
@@ -112,5 +124,21 @@ class BodyPendulum(Framework):
 
     def Step(self, settings):
         super(BodyPendulum, self).Step(settings)
+
+        pid_p = 100
+        pid_i = 50
+        pid_d = 2
+        w = 0
+
+        pid_control = PIDControl(pid_p, pid_i, pid_d)
+        e = (w - self.pendulum.angle)*-1
+        y = pid_control.get_xa(e)
+
+        if self._auto and self._isLiving:
+            self.pendelumLJoin.maxMotorTorque = 1000
+            self.pendelumRJoin.maxMotorTorque = 1000
+            self.pendelumLJoin.motorSpeed = y
+            self.pendelumRJoin.motorSpeed = y
+
         #print(self.carBody.position.x)
-        print(self.pendulum.angle)
+        #print(self.pendulum.angle)

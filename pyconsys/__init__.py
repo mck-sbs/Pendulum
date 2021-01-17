@@ -2,7 +2,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-from pendulum.BodyPendulum import *
 
-mb = BodyPendulum
-main(mb)
+__all__ = ["Control", "DControl", "IControl", "PControl", "PT1", "PT2", "PIDControl", "Rating", "Evopid",
+           "DelayControl"]

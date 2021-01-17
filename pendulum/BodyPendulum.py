@@ -21,7 +21,8 @@ class BodyPendulum(Framework):
     def createWorld(self):
         self._isLiving = True
         self._auto = False
-        self._pid_control = PIDControl(100, 50, 2) #kp, ki, kd
+        #self._pid_control = PIDControl(100, 50, 2) #kp, ki, kd
+        self._pid_control = PIDControl(105, 83, 28)  # kp, ki, kd
 
 
         self.ground = self.world.CreateBody(

@@ -2,7 +2,7 @@
 
 ## Simulation of inverted pendulum with pid controller
 
-![pendulum_start](./pics/pendulum_start.png)
+![pendulum_start](./pendulum/pics/pendulum_start.png)
 
 ToDo: set the parameters by ai
 

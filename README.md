@@ -4,8 +4,6 @@
 
 ![pendulum_start](./pendulum/pics/pendulum_start.png)
 
-ToDo: set the parameters by ai
-
 intsall:
 - pygame
 - box2d
@@ -21,6 +19,7 @@ keyboard commands:
 
 
 uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
+ToDo: set the parameters by ai
 
 From the course "Mechatronische Systeme (Mechatronic Systems)" and "Künstliche Intelligenz (Artificial Intelligence)", technical college SBS Herzogenaurach-Höchstadt.
 

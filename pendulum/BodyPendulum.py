@@ -116,7 +116,7 @@ class BodyPendulum(Framework):
                 self.pendelumLJoin.motorSpeed = 0
                 self.pendelumLJoin.maxMotorTorque = 1
                 self.pendelumRJoin.motorSpeed = 0
-                self.pendelumRJoin.maxMotorTorque = 1000
+                self.pendelumRJoin.maxMotorTorque = 1
         elif key == Keys.K_d:
             if self._isLiving:
                 self.destroyWorld()

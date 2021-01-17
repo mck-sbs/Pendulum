@@ -20,7 +20,6 @@ keyboard commands:
 
 uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
 
-ToDo: set the parameters by ai
 
 From the course "Mechatronische Systeme (Mechatronic Systems)" and "Künstliche Intelligenz (Artificial Intelligence)", technical college SBS Herzogenaurach-Höchstadt.
 

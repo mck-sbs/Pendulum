@@ -129,7 +129,7 @@ class BodyPendulum(Framework):
         super(BodyPendulum, self).Step(settings)
 
         w = 0
-        e = (w - self.pendulum.angle)*-1
+        e = (w - self.pendulum.angle*-1)
         y = self._pid_control.get_xa(e)
 
         if self._auto and self._isLiving:

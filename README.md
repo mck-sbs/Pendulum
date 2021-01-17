@@ -21,7 +21,7 @@ keyboard commands:
 uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
 
 
-From the course "Mechatronische Systeme (Mechatronic Systems)" and "Künstliche Intelligenz (Artificial Intelligence)", technical college SBS Herzogenaurach-Höchstadt.
+From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.
 
 ___________________________________________________________________________________________
 

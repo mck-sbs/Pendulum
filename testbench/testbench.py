@@ -1,3 +1,4 @@
 from pendulum.BodyPendulum import *
 
-main(BodyPendulum)
+mb = BodyPendulum
+main(mb)

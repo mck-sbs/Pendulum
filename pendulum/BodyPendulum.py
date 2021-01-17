@@ -21,6 +21,8 @@ class BodyPendulum(Framework):
     def createWorld(self):
         self._isLiving = True
         self._auto = False
+        self._pid_control = PIDControl(100, 50, 2) #kp, ki, kd
+
 
         self.ground = self.world.CreateBody(
             shapes=b2EdgeShape(vertices=[(-25, 0), (25, 0)])
@@ -102,10 +104,10 @@ class BodyPendulum(Framework):
     def Keyboard(self, key):
         if key == Keys.K_a:
             if self._isLiving:
-                self.pendelumLJoin.motorSpeed = 10
-                self.pendelumLJoin.maxMotorTorque = 1000
-                self.pendelumRJoin.motorSpeed = 10
-                self.pendelumRJoin.maxMotorTorque = 1000
+                #self.pendelumLJoin.motorSpeed = 10
+                #self.pendelumLJoin.maxMotorTorque = 1000
+                #self.pendelumRJoin.motorSpeed = 10
+                #self.pendelumRJoin.maxMotorTorque = 1000
                 self._auto = True
 
         elif key == Keys.K_m:
@@ -122,17 +124,13 @@ class BodyPendulum(Framework):
             if not self._isLiving:
                 self.createWorld()
 
+
     def Step(self, settings):
         super(BodyPendulum, self).Step(settings)
 
-        pid_p = 100
-        pid_i = 50
-        pid_d = 2
         w = 0
-
-        pid_control = PIDControl(pid_p, pid_i, pid_d)
         e = (w - self.pendulum.angle)*-1
-        y = pid_control.get_xa(e)
+        y = self._pid_control.get_xa(e)
 
         if self._auto and self._isLiving:
             self.pendelumLJoin.maxMotorTorque = 1000

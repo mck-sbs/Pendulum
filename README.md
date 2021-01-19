@@ -1,6 +1,6 @@
 # Inverted Pendulum
 
-## Simulation of inverted pendulum with pid controller (adjustable PID paramters)
+## Simulation of inverted pendulum with PID controller (adjustable PID paramters)
 
 ![pendulum_start](./pendulum/pics/Pendulum.gif)
 

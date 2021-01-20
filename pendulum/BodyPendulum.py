@@ -11,7 +11,6 @@ from pyconsys.PIDControl import PIDControl
 class BodyPendulum(Framework):
     name = "Inverted Pendulum (PyConSys)"
     description = "(m) manual, (a) automatic, (d) delete, (c) create"
-    speed = 3
 
     def __init__(self):
         super(BodyPendulum, self).__init__()

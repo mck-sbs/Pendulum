@@ -18,6 +18,11 @@ ________________________________________________________________________________
 
 PID control loop uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
 
+Following PID parameters are used in this example:
+```
+self._pid_control = PIDControl(105, 83, 28)  # kp, ki, kd
+```
+
 keyboard commands:
 - n: create new world
 - m: manual mode

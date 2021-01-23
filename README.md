@@ -1,6 +1,6 @@
 # Inverted Pendulum
 
-## Simulation of inverted pendulum with PID controller or fuzzy controller
+## Simulation of inverted pendulum with PID controller and fuzzy controller
 
 ![pendulum_start](./pendulum/pics/Pendulum.gif)
 
@@ -10,9 +10,10 @@ intsall:
 - box2d-py
 - scikit-fuzzy
 
-two different control systems included:
+three different control systems included:
 - run Pendulum_PID.py for PID control loop
 - run Pendulum_Fuzzy.py for fuzzy control loop 
+- run Pendulum_Fuzzy_PID.py for combination of fuzzy and PID control loop (runs smoother)
 ___________________________________________________________________________________________
 ### PID control loop
 
@@ -55,6 +56,9 @@ self.pendulum_ctrl = ctrl.ControlSystem([self.rule1, self.rule2, self.rule3, sel
 
 Defuzzification:
 ![input_set](./pendulum/pics/defuzzification.png)
+___________________________________________________________________________________________
+### PID-Fuzzy combination control loop
+Combination of fuzzy ans PID control loop, to get the control loop smoother.
 ___________________________________________________________________________________________
 
 

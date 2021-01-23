@@ -2,7 +2,7 @@
 
 ## Simulation of inverted pendulum with PID controller and fuzzy controller
 
-![pendulum_start](./pendulum/pics/Pendulum.gif)
+![pendulum_start](pics/Pendulum.gif)
 
 intsall:
 - pygame
@@ -36,10 +36,10 @@ keyboard commands:
 - n: create new world
 
 Input fuzzy set:
-![input_set](./pendulum/pics/input_set.png)
+![input_set](pics/input_set.png)
 
 Output fuuzy set:
-![input_set](./pendulum/pics/output_set.png)
+![input_set](pics/output_set.png)
 
 Simple inference:
 ```
@@ -55,7 +55,7 @@ self.pendulum_ctrl = ctrl.ControlSystem([self.rule1, self.rule2, self.rule3, sel
 
 
 Defuzzification:
-![input_set](./pendulum/pics/defuzzification.png)
+![input_set](pics/defuzzification.png)
 ___________________________________________________________________________________________
 ### PID-Fuzzy combination control loop
 Combination of fuzzy ans PID control loop, to get the control loop smoother.

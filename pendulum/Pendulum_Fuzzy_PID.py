@@ -22,7 +22,7 @@ class BodyPendulum(Framework):
 
     def createFuzzy(self):
         self.fuzz_pend1 = ctrl.Antecedent(np.arange(-1, 1.1, 0.1), 'join1')
-        self.fuzz_motor = ctrl.Consequent(np.arange(-300, 300, 2), 'motor')
+        self.fuzz_motor = ctrl.Consequent(np.arange(-300, 300, 1), 'motor')
         self.fuzz_pend1.automf(7)
         self.fuzz_motor.automf(7)
 

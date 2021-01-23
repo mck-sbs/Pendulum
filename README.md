@@ -13,19 +13,21 @@ intsall:
 two different control systems included:
 - run Pendulum_PID.py for PID control loop
 - run Pendulum_Fuzzy.py for fuzzy control loop 
+___________________________________________________________________________________________
+### PID control loop
+
+PID control loop uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
 
 keyboard commands:
 - n: create new world
 - m: manual mode
 - a: automatic mode
-
-___________________________________________________________________________________________
-### PID control loop
-
-PID control loop uses PID library from [PyConSys](https://github.com/mck-sbs/PyConSys)
 ___________________________________________________________________________________________
 ### fuzzy control loop
 fuzzy control loop uses scikit-fuzzy
+
+keyboard commands:
+- n: create new world
 
 Input fuzzy set:
 ![input_set](./pendulum/pics/input_set.png)

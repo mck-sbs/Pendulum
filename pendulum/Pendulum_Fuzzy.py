@@ -10,8 +10,8 @@ from skfuzzy import control as ctrl
 import matplotlib.pyplot as plt
 
 class BodyPendulum(Framework):
-    name = "Inverted Double Pendulum"
-    description = "(m) manual, (a) automatic, (n) new"
+    name = "Inverted Pendulum"
+    description = "(n) new world"
 
     def __init__(self):
         super(BodyPendulum, self).__init__()
@@ -122,13 +122,6 @@ class BodyPendulum(Framework):
                 self.pendelumRJoin.maxMotorTorque = 1000
                 self._auto = True
 
-        elif key == Keys.K_m:
-            self._auto = False
-            if self._isLiving:
-                self.pendelumLJoin.motorSpeed = 0
-                self.pendelumLJoin.maxMotorTorque = 1
-                self.pendelumRJoin.motorSpeed = 0
-                self.pendelumRJoin.maxMotorTorque = 1
         elif key == Keys.K_n:
             if self._isLiving:
                 self.destroyWorld()

@@ -2,3 +2,5 @@
 /venv/
 /pendulum/BodyPendulum_ai.py
 /pendulum/BodyPendulum_ai2.py
+/pendulum/BodyPendulum_double.py
+/pendulum/BodyPendulum_old.py

@@ -4,13 +4,13 @@
 
 ![pendulum_start](pics/Pendulum.gif)
 
-intsall:
+**intsall:**
 - pygame
 - box2d
 - box2d-py
 - scikit-fuzzy
 
-four different control systems included:
+**four different control systems included:**
 - run Pendulum_PID.py for PID control loop
 - run Pendulum_Fuzzy.py for fuzzy control loop 
 - run Pendulum_Fuzzy_PID.py for combination of fuzzy and PID control loop (runs smoother)
@@ -36,17 +36,17 @@ fuzzy control loop uses scikit-fuzzy
 keyboard commands:
 - n: create new world
 
-Input fuzzy set:<br/>
+**Input fuzzy set:**<br/>
 
 ![input_set](pics/input_set.png)
 
 
 
-Output fuzzy set:<br/>
+**Output fuzzy set:**<br/>
 
 ![input_set](pics/output_set.png)
 
-Simple inference:
+**Simple inference:**
 ```
 self.rule1 = ctrl.Rule(self.fuzz_pend1['dismal'], self.fuzz_motor['dismal'])
 self.rule2 = ctrl.Rule(self.fuzz_pend1['poor'], self.fuzz_motor['poor'])
@@ -59,7 +59,7 @@ self.pendulum_ctrl = ctrl.ControlSystem([self.rule1, self.rule2, self.rule3, sel
 ```
 
 
-Defuzzification:<br/>
+**Defuzzification:**<br/>
 
 ![input_set](pics/defuzzification.png)
 ___________________________________________________________________________________________
@@ -69,44 +69,44 @@ ________________________________________________________________________________
 ### Combination of two fuzzy controls
 This keeps the pendulum in the middle. 
 
-First fuzzy
+**First fuzzy**
 - input: angle and angle speed
 - output: motor1
 
-angle<br/>
+**angle**<br/>
 
 ![input_set](pics/advanced_angle.png)
 
-angle speed<br/>
+**angle speed**<br/>
 
 ![input_set](pics/advanced_angle_speed.png)
 
-motor1<br/>
+**motor1**<br/>
 
 ![input_set](pics/advanced_motor1.png)
 
-Second Fuzzy
+**Second Fuzzy**
 - input: position and speed
 - output: output motor2
 
-position<br/>
+**position**<br/>
 
 ![input_set](pics/advanced_position.png)
 
-speed<br/>
+**speed**<br/>
 
 ![input_set](pics/advanced_speed.png)
 
-motor2<br/>
+**motor2**<br/>
 
 ![input_set](pics/advanced_motor2.png)
 
-fuzzy rules<br/>
+**fuzzy rules**<br/>
 
 ![input_set](pics/advanced_rules.png)
 
 
-motor = motor1 + motor2
+**motor = motor1 + motor2**
 ___________________________________________________________________________________________
 
 From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.

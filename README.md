@@ -36,10 +36,14 @@ fuzzy control loop uses scikit-fuzzy
 keyboard commands:
 - n: create new world
 
-Input fuzzy set:
+Input fuzzy set:<br/>
+
 ![input_set](pics/input_set.png)
 
-Output fuzzy set:
+
+
+Output fuzzy set:<br/>
+
 ![input_set](pics/output_set.png)
 
 Simple inference:
@@ -55,7 +59,8 @@ self.pendulum_ctrl = ctrl.ControlSystem([self.rule1, self.rule2, self.rule3, sel
 ```
 
 
-Defuzzification:
+Defuzzification:<br/>
+
 ![input_set](pics/defuzzification.png)
 ___________________________________________________________________________________________
 ### PID-Fuzzy combination control loop
@@ -68,29 +73,35 @@ First fuzzy
 - input: angle and angle speed
 - output: motor1
 
-angle
+angle<br/>
+
 ![input_set](pics/advanced_angle.png)
 
-angle speed
+angle speed<br/>
+
 ![input_set](pics/advanced_angle_speed.png)
 
-motor1
+motor1<br/>
+
 ![input_set](pics/advanced_motor1.png)
 
 Second Fuzzy
 - input: position and speed
 - output: output motor2
 
-angle
+angle<br/>
+
 ![input_set](pics/advanced_position.png)
 
-angle speed
+angle speed<br/>
+
 ![input_set](pics/advanced_speed.png)
 
-motor2
+motor2<br/>
+
 ![input_set](pics/advanced_motor2.png)
 
-####motor = motor1 + motor2
+motor = motor1 + motor2
 ___________________________________________________________________________________________
 
 From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.

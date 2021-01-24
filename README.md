@@ -89,11 +89,11 @@ Second Fuzzy
 - input: position and speed
 - output: output motor2
 
-angle<br/>
+position<br/>
 
 ![input_set](pics/advanced_position.png)
 
-angle speed<br/>
+speed<br/>
 
 ![input_set](pics/advanced_speed.png)
 

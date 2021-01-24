@@ -101,6 +101,11 @@ motor2<br/>
 
 ![input_set](pics/advanced_motor2.png)
 
+fuzzy rules<br/>
+
+![input_set](pics/advanced_rules.png)
+
+
 motor = motor1 + motor2
 ___________________________________________________________________________________________
 

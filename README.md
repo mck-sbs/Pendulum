@@ -10,10 +10,11 @@ intsall:
 - box2d-py
 - scikit-fuzzy
 
-three different control systems included:
+four different control systems included:
 - run Pendulum_PID.py for PID control loop
 - run Pendulum_Fuzzy.py for fuzzy control loop 
 - run Pendulum_Fuzzy_PID.py for combination of fuzzy and PID control loop (runs smoother)
+- run Pendulum_Fuzzy_PID_advanced.py for combination of two fuzzy controls to keep the pendulum in the middle
 ___________________________________________________________________________________________
 ### PID control loop
 
@@ -60,7 +61,20 @@ ________________________________________________________________________________
 ### PID-Fuzzy combination control loop
 Combination of fuzzy ans PID control loop, to get the control loop smoother.
 ___________________________________________________________________________________________
+### Combination of two fuzzy controls
+This keeps the pendulum in the middle. 
 
+First fuzzy
+- input: angle and angle speed
+- output: motor1
+
+Second Fuzzy
+- position and speed
+- output motor2
+
+motor = motor1 + motor2
+___________________________________________________________________________________________
+### PID-Fuzzy combination control loop
 
 From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.
 

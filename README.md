@@ -39,7 +39,7 @@ keyboard commands:
 Input fuzzy set:
 ![input_set](pics/input_set.png)
 
-Output fuuzy set:
+Output fuzzy set:
 ![input_set](pics/output_set.png)
 
 Simple inference:
@@ -68,11 +68,29 @@ First fuzzy
 - input: angle and angle speed
 - output: motor1
 
-Second Fuzzy
-- position and speed
-- output motor2
+angle
+![input_set](pics/advanced_angle.png)
 
-motor = motor1 + motor2
+angle speed
+![input_set](pics/advanced_angle_speed.png)
+
+motor1
+![input_set](pics/advanced_motor1.png)
+
+Second Fuzzy
+- input: position and speed
+- output: output motor2
+
+angle
+![input_set](pics/advanced_position.png)
+
+angle speed
+![input_set](pics/advanced_speed.png)
+
+motor2
+![input_set](pics/advanced_motor2.png)
+
+####motor = motor1 + motor2
 ___________________________________________________________________________________________
 
 From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.

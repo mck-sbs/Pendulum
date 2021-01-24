@@ -74,7 +74,6 @@ Second Fuzzy
 
 motor = motor1 + motor2
 ___________________________________________________________________________________________
-### PID-Fuzzy combination control loop
 
 From the course "Mechatronische Systeme (Mechatronic Systems)", technical college SBS Herzogenaurach-Höchstadt.
 
